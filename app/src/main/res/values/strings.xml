@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RPS Game</string>
+    <string name="yes">yes</string>
+    <string name="no">no</string>
+</resources>

@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        applicationId "com.example.rpsgame"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //    dependency for recyclerview
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+
+//    dependency for design
+    implementation 'com.google.android.material:material:1.0.0'
+
+//    dependency for cardview
+    implementation "androidx.cardview:cardview:1.0.0"
+
+    //    picasso for images to load from url and many more things
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //    sdp library to position the elements on the right position in all sizes of device
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+}
